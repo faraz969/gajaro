@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gajaro - AI Voice Transform Reality</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg rounded-full mx-2 sm:mx-4 mt-4 px-4 sm:px-6 py-3 relative z-50">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/images/gajaro.png" alt="Gajaro Logo" class="h-8 sm:h-10 w-auto">
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="#" class="text-gray-700 hover:text-primary text-sm lg:text-base">Home</a>
+                <a href="#" class="text-gray-700 hover:text-primary text-sm lg:text-base">About</a>
+                <a href="#" class="text-gray-700 hover:text-primary text-sm lg:text-base">Features</a>
+                <a href="#" class="text-gray-700 hover:text-primary text-sm lg:text-base">Pricing</a>
+                <a href="#" class="text-gray-700 hover:text-primary text-sm lg:text-base">Contact</a>
+            </div>
+            
+            <!-- Desktop Buttons -->
+            <div class="hidden sm:flex space-x-2 lg:space-x-4">
+                <button class="bg-gray-100 text-gray-800 py-2 lg:py-3 rounded-full hover:bg-gray-200 flex items-center relative overflow-hidden">
+                    <span class="px-3 lg:px-6 pr-12 lg:pr-16 text-sm lg:text-base">Get Started</span>
+                    <div class="absolute right-0 top-0 bottom-0 flex items-center justify-center w-8 lg:w-12">
+                        <img src="assets/images/ArrowCircleRight.png" alt="Arrow" class="w-[36px] h-[36px] lg:w-[36px] lg:h-[36px]">
+                    </div>
+                </button>
+                <button class="bg-blue-200 text-gray-800 py-2 lg:py-3 rounded-full hover:bg-blue-300 flex items-center relative overflow-hidden">
+                    <span class="px-3 lg:px-6 pr-12 lg:pr-16 text-sm lg:text-base">Request A Demo</span>
+                    <div class="absolute right-0 top-0 bottom-0 flex items-center justify-center w-8 lg:w-12">
+                        <img src="assets/images/ArrowCircleRight.png" alt="Arrow" class="w-[36px] h-[36px] lg:w-[36px] lg:h-[36px]">
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-primary">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-lg mt-2 p-4 z-50">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="text-gray-700 hover:text-primary py-2">Home</a>
+                <a href="#" class="text-gray-700 hover:text-primary py-2">About</a>
+                <a href="#" class="text-gray-700 hover:text-primary py-2">Features</a>
+                <a href="#" class="text-gray-700 hover:text-primary py-2">Pricing</a>
+                <a href="#" class="text-gray-700 hover:text-primary py-2">Contact</a>
+                <div class="flex flex-col space-y-2 pt-2">
+                    <button class="bg-gray-100 text-gray-800 py-2 px-4 rounded-full hover:bg-gray-200 text-sm">
+                        Get Started
+                    </button>
+                    <button class="bg-blue-200 text-gray-800 py-2 px-4 rounded-full hover:bg-blue-300 text-sm">
+                        Request A Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden  -mt-20 z-10 mx-2 rounded">
+        <div class="absolute inset-0">
+            <img src="assets/images/background.png" alt="Background" class="w-full h-full ">
+        </div>
+        <div class=" mx-auto px-6 relative z-10 pt-32">
+            <div class="text-center relative">
+                <!-- Left Floating Card -->
+                <div class="hidden lg:block absolute left-0 top-0 bg-white rounded-lg p-4 shadow-lg w-64 transform translate-y-[200px]">
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                        <div class="bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded">New</div>
+                    </div>
+                    <div class="float-left">
+                        <div class="font-bold text-gray-800">Brandon Denta</div>
+                        <div class="text-sm text-gray-600">UI/UX Designer</div>
+                    </div>
+                    
+                </div>
+
+                <!-- Right Floating Card -->
+                <div class="hidden lg:block absolute right-0 top-4 bg-white rounded-lg p-4 shadow-lg w-64 transform translate-y-32">
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div>
+                                <div class="font-bold text-gray-800">Johnia</div>
+                                <div class="text-sm text-gray-600">UI/UX Designer</div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 7.946a.641.641 0 0 1 .633-.543h3.35c3.114 0 5.563 1.883 6.131 4.786.24 1.2.187 2.228-.096 3.133-.284.905-.784 1.633-1.433 2.15-.649.517-1.433.775-2.302.775h-.5c-.276 0-.5.224-.5.5s.224.5.5.5h.5c1.033 0 1.95-.313 2.65-.85.7-.537 1.25-1.25 1.583-2.15.333-.9.4-1.95.2-3.15-.4-2.4-2.4-4.2-5.2-4.2h-2.7a.641.641 0 0 0-.633.543L1.837 20.597a.641.641 0 0 0 .633.74h4.606a.641.641 0 0 0 .633-.543l.633-3.35a.641.641 0 0 1 .633-.543h.5c.276 0 .5.224.5.5s-.224.5-.5.5h-.5a.641.641 0 0 0-.633.543l-.633 3.35a.641.641 0 0 1-.633.543z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <div>
+                            <div class="text-gray-500">Total Cost</div>
+                            <div class="font-bold">$5,890.00</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-500">Net Pay</div>
+                            <div class="font-bold">$3,800.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-6xl lg:text-[7rem] text-white mb-6 leading-tight" >
+                    AI Voice<br>
+                    Transform<br>
+                    Reality
+                </h1>
+
+                <!-- Descriptive Text -->
+                <p class="text-xl text-white opacity-90 mt-12 mb-12 max-w-2xl mx-auto">
+                    Generate human-like voices with Retro's AI text-to-speech technology. The best online AI voice generator
+                </p>
+
+                <!-- Bottom Statistics Section -->
+                <div class="flex flex-col lg:flex-row justify-between items-center max-w-4xl mx-auto mb-12 space-y-6 lg:space-y-0">
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-white rounded-full px-4 lg:px-[40px] py-2 lg:py-3 flex items-center space-x-2 lg:space-x-3 ml-4 lg:ml-[100px]">
+                            <div class="flex -space-x-1 lg:-space-x-2">
+                                <div class="w-[25px] h-[25px] lg:w-[50px] lg:h-[50px] bg-yellow-400 rounded-full border-2 border-white"></div>
+                                <div class="w-[25px] h-[25px] lg:w-[50px] lg:h-[50px] bg-pink-400 rounded-full border-2 border-white"></div>
+                                <div class="w-[25px] h-[25px] lg:w-[50px] lg:h-[50px] bg-green-400 rounded-full border-2 border-white"></div>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -top-5 -left-2 lg:-top-5 lg:-left-2 -top-2 -left-1 w-[100px] h-[100px] lg:w-[100px] lg:h-[100px] w-[60px] h-[60px] bg-gradient-to-br from-pink-400 to-orange-500 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(236,72,153,0.4),0_0_40px_rgba(249,115,22,0.3)] hover:shadow-[0_0_25px_rgba(236,72,153,0.6),0_0_50px_rgba(249,115,22,0.4)] transition-shadow duration-300 z-10">
+                                <svg class="w-10 h-10 lg:w-10 lg:h-10 w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                                    <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                                </svg>
+                            </div>
+                            <div class="ml-[60px] lg:ml-[100px]">
+                                <div class="text-[10px] lg:text-2xl font-bold text-gray-800">1.7mil+</div>
+                                <div class="text-[5px] lg:text-lg text-gray-600">Active Clients</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="text-center">
+                        <div class="text-2xl lg:text-6xl  text-white mb-2 ml-[20px]">13,00000+</div>
+                        <div class="text-sm lg:text-xl text-white opacity-90">Voice Generate</div>
+                    </div>
+                </div>
+
+                <!-- Hero Section Image -->
+                
+            </div>
+            <!-- <div class="mt-12">
+                <img src="assets/images/herosection.png" alt="Hero Section" class="w-full max-w-4xl mx-auto">
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Why Choose Our App Section -->
+    <section class="py-20 mt-5" style="background-color: #f3f1fe;">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- <div class="text-center mb-4">
+                <span class="bg-gradient-to-r from-purple-200 to-purple-30 text-purple font-semibold uppercase tracking-wide px-4 py-2 rounded-full inline-block">Features</span>
+            </div> -->
+            <h2 class="text-4xl  text-center mb-16">Your Email is Costing you Millions</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="rounded-lg p-8 card-shadow text-center border border-white">
+                    <img src="assets/images/c_image1.png" alt="Best Quality Development" class="w-200 h-300 mx-auto mb-6">
+                    <h3 class="text-xl font-semibold ">$2.4M</h3>
+                    <p class="mb-4">Wasted Time searching</p>
+                    <p class="text-gray-600">Your team spends 2.6 hours EVERY DAY just searching for information in emails</p>
+                </div>
+                <div class="rounded-lg p-8 card-shadow text-center border border-white">
+                    <img src="assets/images/c_image2.png" alt="Cost Minimizer" class="w-200 h-300 mx-auto mb-6">
+                    <h3 class="text-xl font-semibold">$1.8M</h3>
+                    <p class="mb-4">Missed Opportunities</p>
+
+                    <p class="text-gray-600">Important client conversations fall through the cracks, deals are lost</p>
+                </div>
+                <div class="rounded-lg p-8 card-shadow text-center border border-white">
+                    <img src="assets/images/c_image3.png" alt="Business & Finance" class="w-200 h-300 mx-auto mb-6">
+                    <h3 class="text-xl font-semibold">$900K</h3>
+                    <p class="mb-4">Compliance Risks</p>
+
+                    <p class="text-gray-600">Scattered communications create audit nightmares and legal exposure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- It'll Find and Fix Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-start justify-between">
+               
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="text-left mb-1">
+                        <span class=" text-[10px] bg-gradient-to-r from-purple-200 to-purple-30 text-label  uppercase tracking-wide px-4 py-1 rounded-full inline-block ">Core Differentiators</span>
+                    </div>
+                    <h2 class="text-3xl  mb-6">Why Gajaro Changes Everything</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Traditional email platforms search text. We understand meaning, context, and relationships.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="hard-drive" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Memory Threads: Your Secret Weapon</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="database" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">AI-Powered Response Intelligence</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="bar-chart" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Predictive Business Intelligence</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="folder" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Increase reply rates</span>
+                        </div>
+                    </div>
+                    <!-- <button class="bg-black text-white px-8 py-3 rounded font-semibold hover:bg-opacity-90">
+                         Power Your Words
+                    </button> -->
+                </div>
+                <div class="lg:w-1/2 relative max-w-2xl mx-auto lg:mx-0 mt-8 mb-8 lg:mt-0 lg:mb-0">
+                    <!-- Main image (servicedesign2.jpg) - positioned like laptop in background -->
+                    <img src="assets/images/servicedesign2.jpg" alt="Service Design" class="w-[250px] sm:w-[300px] transform -rotate-6 opacity-80 rounded mr-[60px] sm:mr-0">
+                    
+                    <!-- Overlapping image (serviceDesign.png) - positioned like smartphone/tablet in foreground -->
+                    <img src="assets/images/serviceDesign.png" alt="Service Design 2" class="absolute -top-12 -right-2 sm:right-5 w-[200px] sm:w-[330px] transform rotate-[10deg] shadow-lg h-[250px] sm:h-[350px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generate Any Voices Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-start justify-between">
+                <!-- Left Panel: AI Voice Generator Interface -->
+                <div class="lg:w-2/5 mb-12 lg:mb-0">
+                    <img src="assets/images/section3.png" alt="Voice Generation Interface" class="w-full">
+                </div>
+                
+                <!-- Right Panel: Marketing Content -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Semantic Understanding
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 max-w-2xl">
+                        Our AI doesn't just read text - it understands context, intent, and meaning behind every communication.
+                    </p>
+                    <!-- <button class="bg-white border-2 border-black text-black px-2 py-2 rounded-full font-semibold hover:bg-gray-50 flex items-center">
+                        Generate Voice
+                        <img src="assets/images/ArrowCircleRight.png" alt="Arrow" class="w-[36px] h-[36px] lg:w-[36px] lg:h-[36px] ml-2">
+                    </button> -->
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Natural language processing with 95% accuracy</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Context-aware entity recognition</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Sentiment analysis and tone detection</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Multi-language support with real-time translation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Making Content Available Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-start">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-4xl lg:text-6xl font-bold mb-6">Intelligent Conversation Threading</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Automatically groups related conversations across different platforms and time periods.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Smart thread detection across email, Slack, Teams</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Timeline reconstruction of complex discussions</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Participant relationship mapping</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-[40px] h-[40px] text-icon"></i>
+                            <span class="font-semibold">Decision point identification</span>
+                        </div>
+                    </div>
+                    <!-- <button class="bg-white border-2 border-black text-black px-2 py-2 rounded-full font-semibold hover:bg-gray-50 flex items-center">
+                        Explore More
+                        <img src="assets/images/ArrowCircleRight.png" alt="Arrow" class="w-[36px] h-[36px] lg:w-[36px] lg:h-[36px] ml-2">
+                    </button> -->
+                </div>
+                <div class="lg:w-1/2">
+                    <img src="assets/images/section4.png" alt="Multilingual Support" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download App Section -->
+    <section class="py-20" style="background-color: #f3f1fe;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <!-- Left Side: App Screenshots -->
+                <div class="lg:w-2/5 mb-12 lg:mb-0">
+                    <div class="relative h-[400px]">
+                        <!-- Left Phone Screen (from bottom) -->
+                        <img src="assets/images/appscreen.png" alt="App Screen 1" class="hidden lg:block absolute left-0 top-[85px] w-48 h-100 transform shadow-lg">
+                        
+                        <!-- Right Phone Screen (from top) -->
+                        <img src="assets/images/appscreen.png" alt="App Screen 2" class="relative lg:absolute right-0 bottom-[80px] lg:bottom-[85px] w-48 h-100 transform shadow-lg">
+                    </div>
+                </div>
+                
+                <!-- Right Side: Marketing Content -->
+                <div class="lg:w-1/2">
+                    <div class="text-left mb-1">
+                        <span class=" text-[10px] bg-gradient-to-r from-purple-200 to-purple-30 text-label  uppercase tracking-wide px-4 py-1 rounded-full inline-block ">DATA-DRIVEN COACHING</span>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">Download the Gajaro app now!</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Your ultimate travel partner. Carries the information you need while travelling.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 flex items-center">
+                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                            </svg>
+                            Google Play
+                        </button>
+                        <button class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 flex items-center">
+                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
+                            </svg>
+                            Download on the App Store
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gajaro Section -->
+    <section class="py-20" style="background-color: #3A2C39;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-1">
+                <span class=" text-[10px] bg-gradient-to-r from-purple-200 to-purple-30 text-black  uppercase tracking-wide px-4 py-1 rounded-full inline-block ">The Solution</span>
+            </div>
+            <h2 class="text-4xl lg:text-6xl font-bold text-white text-center mb-6">Meet Gajaro - Your Unfair Competitive Advantage</h2>
+            <p class="text-xl text-gray-300 text-center mb-12 max-w-4xl mx-auto">
+                The world's first email intelligence platform that transforms your email from a productivity drain into a competitive weapon.
+            </p>
+            
+            <div class="text-center bg-primary rounded-lg p-8 border border-primary/20 max-w-4xl mx-auto">
+                <div class="text-d_primary font-bold text-lg sm:text-[2.5rem] lg:text-3xl mb-2">Gajaro doesn't just organize your email.</div>
+                <div class="text-white text-lg sm:text-2xl lg:text-3xl">It creates Memory Threads - automatically connecting every related conversation into complete stories.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-300 rounded-lg h-96 flex items-center justify-center mb-8">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M8 5v10l8-5-8-5z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="text-center mb-1">
+                    <span class=" text-[10px] bg-gradient-to-r from-purple-200 to-purple-30 text-label  uppercase tracking-wide px-4 py-1 rounded-full inline-block ">Easy Process</span>
+                </div>
+                <h2 class="text-4xl ">Streamline Hiring in <br>Four Simple Steps</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20" style="background-color: #3A2C39;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-1">
+                <span class=" text-[10px]  text-primary  uppercase tracking-wide px-4 py-1 rounded-full inline-block ">Flexible Plans</span>
+            </div>
+            <h2 class="text-4xl font-bold text-center text-white mb-8">Affordable Pricing For Every Business Size</h2>
+            
+            <!-- Toggle Switch -->
+            <div class="flex justify-center mb-12">
+                <div class="bg-gray-700 rounded-full p-1 flex">
+                    <button class="bg-primary text-white px-6 py-2 rounded-full font-semibold">Monthly</button>
+                    <button class="text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-600">Yearly</button>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-lg p-8 card-shadow lg:-mr-[30px]">
+                    <h3 class="text-2xl font-bold mb-2">Starter Plan</h3>
+                    <p class="text-gray-600 mb-6">Ideal for small teams and startups one morning, when Gregor Samsa horrible vermin.</p>
+                    <div class="text-4xl font-bold text-black mb-6">$29<span class="text-lg text-gray-600">/ Month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Job posting & candidate tracking
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            AI-powered resume screening
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Basic onboarding automation
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Employee directory management
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Payroll processing (limited)
+                        </li>
+                    </ul>
+                    <button class=" w-full bg-b_bg  text-black px-2 py-2 rounded-full font-semibold hover:bg-gray-50 flex items-center">
+                        Get Started
+                        <img src="assets/images/ArrowCircleRight.png" alt="Arrow" class="w-[36px] h-[36px] lg:w-[36px] lg:h-[36px] ml-auto">
+                    </button>
+                </div>
+                
+                <!-- Growth Plan (Highlighted) -->
+                <div class="bg-primary rounded-lg p-8 card-shadow text-black relative transform scale-105">
+                    <div class="absolute -top-3 right-6 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
+                        <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
+                        </svg>
+                        Popular
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Growth Plan</h3>
+                    <p class="text-black-200 mb-6">Best for growing businesses one morning, when Gregor Samsa horrible vermin.</p>
+                    <div class="text-4xl font-bold mb-6">$79<span class="text-lg opacity-80">/ Month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            All Starter features
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Advanced AI recruitment tools
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Performance & productivity tracking
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Payroll & benefits automation
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Customizable reporting & analytics
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Live chat & priority support
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Payroll processing (unlimited)
+                        </li>
+                    </ul>
+                    <button class=" w-full bg-d_primary  text-white px-2 py-2 rounded-full font-semibold hover:bg-gray-50 flex items-center">
+                        Get Started
+                        <img src="assets/images/ArrowCircleRight.png" alt="Arrow" class="w-[36px] h-[36px] lg:w-[36px] lg:h-[36px] ml-auto">
+                    </button>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-lg p-8 card-shadow lg:-ml-[30px]">
+                    <h3 class="text-2xl font-bold mb-2">Enterprise Plan</h3>
+                    <p class="text-gray-600 mb-6">Designed for large organizations one morning, when Gregor Samsa horrible vermin.</p>
+                    <div class="text-4xl font-bold text-black mb-6">Custom</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            All Growth features
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Unlimited job postings & users
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Dedicated account manager
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            API access & custom integrations
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-black mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Advanced security & compliance
+                        </li>
+                    </ul>
+                    <button class=" w-full bg-b_bg  text-black px-2 py-2 rounded-full font-semibold hover:bg-gray-50 flex items-center">
+                        Get Started
+                        <img src="assets/images/ArrowCircleRight.png" alt="Arrow" class="w-[36px] h-[36px] lg:w-[36px] lg:h-[36px] ml-auto">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Left Column: Contact Information -->
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="mb-4">
+                        <span class="text-primary  uppercase tracking-wide text-sm">NEED HELP?</span>
+                    </div>
+                    <h2 class="text-4xl  mb-6">Frequently Asked Questions<br>Answered For You</h2>
+                    <p class="text-gray-600 mb-8">
+                        Find quick answers to common questions about our platform, features, pricing, and support. If you need more help, feel free to reach out to our team anytime.
+                    </p>
+                    
+                    <!-- Contact Information -->
+                    <div class="space-y-10">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-grey opacity-50">Call Us</div>
+                                <div class="text-gray-600">+1 (555) 123-4567</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-grey opacity-50">Mail Us</div>
+                                <div class="text-gray-600">Contact@Gajaro.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: FAQ Accordion -->
+                <div class="lg:w-1/2">
+                    <div class="space-y-0">
+                        <!-- FAQ Item 1 (Expanded by default) -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <div class="flex justify-between items-start cursor-pointer" onclick="toggleFAQ(1)">
+                                <h3 class="font-semibold text-lg pr-4">How does help with HR and workforce management?</h3>
+                                <svg id="icon-1" class="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div id="answer-1" class="mt-4 text-gray-600">
+                                Our platform automates hiring, payroll, onboarding, and employee tracking, reducing manual tasks. It enhances efficiency, ensures compliance, and integrates seamlessly with tools like Slack, QuickBooks, and Google Workspace.
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <div class="flex justify-between items-start cursor-pointer" onclick="toggleFAQ(2)">
+                                <h3 class="font-semibold text-lg pr-4">Can I integrate this HR software third-party applications?</h3>
+                                <svg id="icon-2" class="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div id="answer-2" class="mt-4 text-gray-600 hidden">
+                                Yes, our HR software offers comprehensive API access and supports integration with popular third-party applications including Slack, QuickBooks, Google Workspace, and many more.
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 3 -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <div class="flex justify-between items-start cursor-pointer" onclick="toggleFAQ(3)">
+                                <h3 class="font-semibold text-lg pr-4">What security do you have to protect my HR data?</h3>
+                                <svg id="icon-3" class="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div id="answer-3" class="mt-4 text-gray-600 hidden">
+                                We implement enterprise-grade security measures including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to ensure your HR data remains protected.
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 4 -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <div class="flex justify-between items-start cursor-pointer" onclick="toggleFAQ(4)">
+                                <h3 class="font-semibold text-lg pr-4">Which pricing plan is best for my company's size?</h3>
+                                <svg id="icon-4" class="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div id="answer-4" class="mt-4 text-gray-600 hidden">
+                                We offer flexible pricing plans designed for different company sizes. Small teams typically start with our Starter plan, growing businesses benefit from our Growth plan, and large organizations can opt for our Enterprise plan with custom pricing.
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 5 -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <div class="flex justify-between items-start cursor-pointer" onclick="toggleFAQ(5)">
+                                <h3 class="font-semibold text-lg pr-4">What customer support is available for users?</h3>
+                                <svg id="icon-5" class="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div id="answer-5" class="mt-4 text-gray-600 hidden">
+                                We provide comprehensive customer support including live chat, email support, phone support for premium plans, detailed documentation, video tutorials, and a dedicated customer success team.
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 6 -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <div class="flex justify-between items-start cursor-pointer" onclick="toggleFAQ(6)">
+                                <h3 class="font-semibold text-lg pr-4">Is there a free trial available a subscription plan?</h3>
+                                <svg id="icon-6" class="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div id="answer-6" class="mt-4 text-gray-600 hidden">
+                                Yes, we offer a 14-day free trial for all our subscription plans. You can explore all features without any commitment, and our team is available to help you get started and answer any questions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleFAQ(id) {
+            const answer = document.getElementById(`answer-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            // Toggle the answer visibility
+            answer.classList.toggle('hidden');
+            
+            // Toggle the icon between plus and minus
+            if (answer.classList.contains('hidden')) {
+                // Show plus icon
+                icon.innerHTML = '<path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>';
+            } else {
+                // Show minus icon
+                icon.innerHTML = '<path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>';
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-d_primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 border-b border-white border-opacity-20 py-10">
+                <!-- Left Side: Hero Section -->
+                <div>
+                    <h2 class="text-3xl  mb-6">Start Streamlining Your HR Today</h2>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <button class="bg-accent text-gray-800 py-2 lg:py-3 rounded-full hover:bg-gray-200 flex items-center relative overflow-hidden">
+                            <span class="px-3 lg:px-6 pr-12 lg:pr-16 text-sm lg:text-base">Get A Demo</span>
+                            <div class="absolute right-0 top-0 bottom-0 flex items-center justify-center w-8 lg:w-12">
+                                <img src="assets/images/ArrowCircleRight.png" alt="Arrow" class="w-[36px] h-[36px] lg:w-[36px] lg:h-[36px]">
+                            </div>
+                        </button>
+                        <div class="w-16 h-8 bg-gray-300 rounded-lg"></div>
+                    </div>
+                    <div class="flex items-center space-x-2 text-sm">
+                        <span>Visit Our Website</span>
+                        <div class="flex-1 border-t border-white mx-2"></div>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>https://Gajaro.com</span>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Navigation Links -->
+                <div class="grid grid-cols-3 gap-8">
+                    <div>
+                        <h3 class=" mb-4 text-primary">Company</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:underline">Home</a></li>
+                            <li><a href="#" class="hover:underline">About Us</a></li>
+                            <li><a href="#" class="hover:underline">Services</a></li>
+                            <li><a href="#" class="hover:underline">Pricing</a></li>
+                            <li><a href="#" class="hover:underline">Career</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class=" mb-4 text-primary">Resources</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:underline">Blog/Articles</a></li>
+                            <li><a href="#" class="hover:underline">Case Studies</a></li>
+                            <li><a href="#" class="hover:underline">Help Center</a></li>
+                            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class=" mb-4 text-primary">Platform</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:underline">Time Tracking</a></li>
+                            <li><a href="#" class="hover:underline">Benefit</a></li>
+                            <li><a href="#" class="hover:underline">Payroll</a></li>
+                            <li><a href="#" class="hover:underline">Integrations</a></li>
+                            <li><a href="#" class="hover:underline">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="grid lg:grid-cols-2 gap-12 mt-16">
+                <!-- Right Side: Social, Newsletter, Contact -->
+                <div class="space-y-8 order-1 lg:order-2">
+                    <!-- Follow Us -->
+                    <div>
+                        <h3 class=" mb-4 text-primary">Follow Us</h3>
+                        <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
+                            <a href="#" class="hover:underline">Linkedin</a>
+                            <a href="#" class="hover:underline">Facebook</a>
+                            <a href="#" class="hover:underline">Instagram</a>
+                            <a href="#" class="hover:underline">Youtube</a>
+                            <a href="#" class="hover:underline">Twitter/X</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Subscribe Newsletter -->
+                    <div>
+                        <h3 class=" mb-4 text-primary">Subscribe Our Newsletter</h3>
+                        <div class="relative">
+                            <input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 pr-12 rounded-full bg-transparent border-2 border-gray-300 text-white placeholder-gray-400 focus:outline-none focus:border-white">
+                            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                                <svg class="w-4 h-4 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class=" mb-4 text-primary">Contact Information</h3>
+                        <div class="flex space-x-6">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>123 Business Street</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Left Side: Brand and Description -->
+                <div class="order-2 lg:order-1">
+                    <div class="mb-6">
+                        <img src="assets/images/gajaro.png" alt="Gajaro Logo" class="h-16 sm:h-20 md:h-24 lg:h-32 xl:h-36 w-auto">
+                    </div>
+                    <p class="text-sm opacity-90 mb-6">
+                        He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections, when Gregor Samsa woke from dreams.
+                    </p>
+                    <div class="lg:flex lg:justify-between lg:items-center">
+                        <p class="text-sm opacity-80 mb-4 lg:mb-0">&copy; 2025 All Right Reserved by Gajaro.</p>
+                        <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6">
+                            <a href="#" class="text-sm opacity-80 hover:underline">Security</a>
+                            <a href="#" class="text-sm opacity-80 hover:underline">Accessibility</a>
+                            <a href="#" class="text-sm opacity-80 hover:underline">Status</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            
+            // Close mobile menu on window resize if screen becomes larger
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) { // md breakpoint
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
